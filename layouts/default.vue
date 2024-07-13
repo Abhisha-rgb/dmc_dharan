@@ -15,6 +15,17 @@
     </div>
 </template>
 <script setup>
+// menu
+import {  usemenuStore} from "~/store/menu";
+const menuStore=usemenuStore();
+
+await menuStore.getmenus();
+
+import { useProgramsStore } from "~/store/programs";
+const programsStore = useProgramsStore();
+
+await programsStore.getProgram();
+
 
 // notice
 import { onMounted } from 'vue'
